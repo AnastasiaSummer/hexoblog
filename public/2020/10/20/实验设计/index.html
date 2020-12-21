@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="实验设计问卷设计measurement factor loading 实验设计内部效度外部效度迁移效应 组内设计与组间设计组内设计又称作**被试内设计(within-subjects design)**，其实验进行的方式是:每个被试接受两个或者是两个以上的实验处理,而且每个被试接受的实验处理是完全一致的。 组间设计又被称作**被试间设计(between-subjects design)**，其实验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问卷与实验设计">
+<meta property="og:url" content="http://example.com/2020/10/20/%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="Summer&#39;s Wonderland">
+<meta property="og:description" content="实验设计问卷设计measurement factor loading 实验设计内部效度外部效度迁移效应 组内设计与组间设计组内设计又称作**被试内设计(within-subjects design)**，其实验进行的方式是:每个被试接受两个或者是两个以上的实验处理,而且每个被试接受的实验处理是完全一致的。 组间设计又被称作**被试间设计(between-subjects design)**，其实验">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-20T15:04:38.000Z">
+<meta property="article:modified_time" content="2020-12-21T15:09:21.862Z">
+<meta property="article:author" content="Anastasia Summer">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2020/10/20/%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>问卷与实验设计 | Summer's Wonderland</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Summer's Wonderland</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">welcome to my happy store</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.</span> <span class="nav-text">实验设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E5%8D%B7%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.1.</span> <span class="nav-text">问卷设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1-1"><span class="nav-number">1.2.</span> <span class="nav-text">实验设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E5%86%85%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%BB%84%E9%97%B4%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">组内设计与组间设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%85%B3%E6%A0%B7%E6%9C%AC%E5%92%8C%E7%9B%B8%E5%85%B3%E6%A0%B7%E6%9C%AC"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">无关样本和相关样本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%A0%B7%E6%9C%AC%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">相关样本设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E6%95%88%E5%BA%94%EF%BC%88order-effects%EF%BC%89"><span class="nav-number">1.2.0.3.1.</span> <span class="nav-text">顺序效应（order effects）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%85%B3%E6%A0%B7%E6%9C%AC%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">无关样本设计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%88%E5%BA%94%E5%A4%A7%E5%B0%8F%E5%92%8C%E6%95%88%E5%8A%9B"><span class="nav-number">1.2.1.</span> <span class="nav-text">效应大小和效力</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%88%E5%BA%94"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">效应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%88%E5%8A%9B"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">效力</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BD%B1%E5%93%8D%E6%95%88%E5%8A%9B%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="nav-number">1.2.1.2.0.1.</span> <span class="nav-text">影响效力的因素</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Anastasia Summer</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/20/%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anastasia Summer">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Summer's Wonderland">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          问卷与实验设计
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-20 23:04:38" itemprop="dateCreated datePublished" datetime="2020-10-20T23:04:38+08:00">2020-10-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-21 23:09:21" itemprop="dateModified" datetime="2020-12-21T23:09:21+08:00">2020-12-21</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="实验设计"><a href="#实验设计" class="headerlink" title="实验设计"></a>实验设计</h1><h2 id="问卷设计"><a href="#问卷设计" class="headerlink" title="问卷设计"></a>问卷设计</h2><p>measurement</p>
+<p>factor loading</p>
+<h2 id="实验设计-1"><a href="#实验设计-1" class="headerlink" title="实验设计"></a>实验设计</h2><p>内部效度<br>外部效度<br>迁移效应</p>
+<h4 id="组内设计与组间设计"><a href="#组内设计与组间设计" class="headerlink" title="组内设计与组间设计"></a>组内设计与组间设计</h4><p>组内设计又称作**被试内设计(within-subjects design)**，其实验进行的方式是:每个被试接受两个或者是两个以上的实验处理,而且每个被试接受的实验处理是完全一致的。</p>
+<p>组间设计又被称作**被试间设计(between-subjects design)**，其实验进行的方式是:将被试进行分组,每组被试只接受一种实验处理 也就是说:每组被试所接受的实验处理是不同的。</p>
+<h4 id="无关样本和相关样本"><a href="#无关样本和相关样本" class="headerlink" title="无关样本和相关样本"></a>无关样本和相关样本</h4><p>无关样本的自变量以及相关样本的自变量，前者在自变量的每个条件或者水平上采用不同的参与者，而后者在自变量的不同条件或水平上采用同一批参与者。</p>
+<h4 id="相关样本设计"><a href="#相关样本设计" class="headerlink" title="相关样本设计"></a>相关样本设计</h4><ul>
+<li>在所有的实验中，评估自变量对因变量的影响都要排除其他内在或额外变量。</li>
+<li>与实验任务相关的长期或持续的个体能力差异是我们必须考虑的一个额外变量的来源。</li>
+<li>相关样本消除了个体差异，由此也去除了大部分的额外变量。因此，如果没有不可克服的障碍，我们应该优先选择相关样本自变量设计。</li>
+</ul>
+<h5 id="顺序效应（order-effects）"><a href="#顺序效应（order-effects）" class="headerlink" title="顺序效应（order effects）"></a>顺序效应（order effects）</h5><ul>
+<li>采用相关样本消除了混淆变量的一个来源，却会不幸的引人另一个来源一一顺序效应。</li>
+<li>控制顺序效应的最好方法是采用平衡(counter balance) 技术。</li>
+<li>通过平衡实验顺序，我们就可以确保每种条件在实验中优先和尾随其他条件出现的次数相同。</li>
+</ul>
+<h4 id="无关样本设计"><a href="#无关样本设计" class="headerlink" title="无关样本设计"></a>无关样本设计</h4><ul>
+<li>无关样本设计能够消除顺序效应而且不需要匹配实验材料。</li>
+<li>无关样本设计引入了个体差异，并且比相关样本设计需要更多的参与者。</li>
+</ul>
+<h3 id="效应大小和效力"><a href="#效应大小和效力" class="headerlink" title="效应大小和效力"></a>效应大小和效力</h3><h4 id="效应"><a href="#效应" class="headerlink" title="效应"></a>效应</h4><p>广义上来讲，<strong>效应大小(effect size)</strong> 就是实验中不同实验条件之间的差异幅度（对相关研究来说，效应大小指变量之间关系的强度）。在设计完善的实验中，效应大小就是自变量对因变量的影响程度。</p>
+<h4 id="效力"><a href="#效力" class="headerlink" title="效力"></a>效力</h4><p><strong>效力(power)</strong> 是指实验能够检测到自变量对因变量真实效应的能力。统计检验的效力是指统计检验正确拒绝虚无假设的能力。换句话说，效力就是不犯II 型错误的概率，即成功发现真实存在于心理学世界中的差异的概率。</p>
+<h6 id="影响效力的因素"><a href="#影响效力的因素" class="headerlink" title="影响效力的因素"></a>影响效力的因素</h6><p>• 效应大小；<br>• 显著性水平；<br>• 单尾还是双尾检验；<br>• 统计检验的类型；<br>• 参与者的数最；<br>• 自变量的观测值是相关的还是独立的。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/01/10/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="prev" title="概率论笔记">
+                  <i class="fa fa-chevron-left"></i> 概率论笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/12/21/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Anastasia Summer</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="随机试验 可在相同条件下重复进行 事先知道所有可能出现的结果 试验前不知道那个结果会发生  样本空间随机试验所有可能结果构成的集合S&#x3D;{e}    e为样本点 随机事件样本空间S的子集A称为随机事件A  必然事件：每次试验总是发生的事件（如S） 基本事件：只含有一个样本点的事件 不可能事件：不包含样本点的空集∅  事件的运算及关系 和事件 A ∪ B，A和B至少有一发生 积事件 A ∩ B，A·B">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率论">
+<meta property="og:url" content="http://example.com/2020/01/10/%E6%A6%82%E7%8E%87%E8%AE%BA/index.html">
+<meta property="og:site_name" content="Summer&#39;s Wonderland">
+<meta property="og:description" content="随机试验 可在相同条件下重复进行 事先知道所有可能出现的结果 试验前不知道那个结果会发生  样本空间随机试验所有可能结果构成的集合S&#x3D;{e}    e为样本点 随机事件样本空间S的子集A称为随机事件A  必然事件：每次试验总是发生的事件（如S） 基本事件：只含有一个样本点的事件 不可能事件：不包含样本点的空集∅  事件的运算及关系 和事件 A ∪ B，A和B至少有一发生 积事件 A ∩ B，A·B">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-10T15:08:33.000Z">
+<meta property="article:modified_time" content="2020-12-21T15:09:11.508Z">
+<meta property="article:author" content="Anastasia Summer">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2020/01/10/%E6%A6%82%E7%8E%87%E8%AE%BA/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>概率论 | Summer's Wonderland</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Summer's Wonderland</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">welcome to my happy store</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E8%AF%95%E9%AA%8C"><span class="nav-number">1.</span> <span class="nav-text">随机试验</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4"><span class="nav-number">1.1.</span> <span class="nav-text">样本空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">随机事件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%9A%84%E8%BF%90%E7%AE%97%E5%8F%8A%E5%85%B3%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">事件的运算及关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%91%E7%8E%87"><span class="nav-number">3.</span> <span class="nav-text">频率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E7%8E%87"><span class="nav-number">4.</span> <span class="nav-text">概率</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E7%9A%84%E7%BB%9F%E8%AE%A1%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">概率的统计性定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E7%9A%84%E5%85%AC%E7%90%86%E5%8C%96%E5%AE%9A%E4%B9%89"><span class="nav-number">4.2.</span> <span class="nav-text">概率的公理化定义</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E5%8F%AF%E8%83%BD%E6%A6%82%E5%9E%8B-%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B"><span class="nav-number">5.</span> <span class="nav-text">等可能概型&#x2F;古典概型</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Anastasia Summer</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/01/10/%E6%A6%82%E7%8E%87%E8%AE%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anastasia Summer">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Summer's Wonderland">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          概率论
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-01-10 23:08:33" itemprop="dateCreated datePublished" datetime="2020-01-10T23:08:33+08:00">2020-01-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-21 23:09:11" itemprop="dateModified" datetime="2020-12-21T23:09:11+08:00">2020-12-21</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="随机试验"><a href="#随机试验" class="headerlink" title="随机试验"></a>随机试验</h4><ol>
+<li>可在相同条件下重复进行</li>
+<li>事先知道所有可能出现的结果</li>
+<li>试验前不知道那个结果会发生</li>
+</ol>
+<h5 id="样本空间"><a href="#样本空间" class="headerlink" title="样本空间"></a>样本空间</h5><p>随机试验所有可能结果构成的集合S={e}    e为样本点</p>
+<h5 id="随机事件"><a href="#随机事件" class="headerlink" title="随机事件"></a>随机事件</h5><p>样本空间S的子集A称为随机事件A</p>
+<ul>
+<li>必然事件：每次试验总是发生的事件（如S）</li>
+<li>基本事件：只含有一个样本点的事件</li>
+<li>不可能事件：不包含样本点的空集∅</li>
+</ul>
+<h4 id="事件的运算及关系"><a href="#事件的运算及关系" class="headerlink" title="事件的运算及关系"></a>事件的运算及关系</h4><ul>
+<li>和事件 A ∪ B，A和B至少有一发生</li>
+<li>积事件 A ∩ B，A·B，AB，A和B同时发生</li>
+<li>AB=∅，AB互斥/不相容</li>
+<li>差事件A - B</li>
+<li>A的逆事件</li>
+</ul>
+<h4 id="频率"><a href="#频率" class="headerlink" title="频率"></a>频率</h4><p>fn(A)反映事件A发生的频繁程度，取值0~1</p>
+<h4 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h4><h5 id="概率的统计性定义"><a href="#概率的统计性定义" class="headerlink" title="概率的统计性定义"></a>概率的统计性定义</h5><p>当试验次数增加时，随机事件A发生的频率的稳定值p称为概率，记为P(A)=p</p>
+<h5 id="概率的公理化定义"><a href="#概率的公理化定义" class="headerlink" title="概率的公理化定义"></a>概率的公理化定义</h5><p>设随机试验样本空间为S，对每个事件A，定义P(A)满足：1. 非负性P(A)&gt;=0；2. 规范性P(S)==1；3. 可列可加性；则P(A)为事件A的概率。</p>
+<h4 id="等可能概型-古典概型"><a href="#等可能概型-古典概型" class="headerlink" title="等可能概型/古典概型"></a>等可能概型/古典概型</h4><ol>
+<li>样本空间S中样本点有限（有限性）</li>
+<li>出现每一样本点概率相等（等可能性）</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/10/20/%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1/" rel="next" title="问卷与实验设计">
+                  问卷与实验设计 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Anastasia Summer</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+</body>
+</html>
